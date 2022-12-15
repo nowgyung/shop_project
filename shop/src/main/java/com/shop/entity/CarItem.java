@@ -25,4 +25,15 @@ public class CarItem extends BaseEntity {
     private Item item;
 
     private int count;
+
+    public static CarItem createCartItem(Cart cart, Item item, int count){
+        CarItem cartItem = new CarItem();
+        cartItem.setCart(cart);
+        cartItem.setItem(item);
+        cartItem.setCount(count);
+        return cartItem;
+    }
+    public void addCount(int count){
+        this.count += count;
+    }
 }

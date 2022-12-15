@@ -44,4 +44,8 @@ public class OrderItem extends BaseEntity {
         return orderPrice*count; // 가격과 수량 곱해서 가격계산
     }
 
+    public void cancel(){
+        this.getItem().addStock(count);
+    }
+
 }
